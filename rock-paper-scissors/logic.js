@@ -36,13 +36,26 @@ function playRound(){
    play(computerSlection,playerSelection);
    console.log(`The scores are => player score : ${playerScore}, computer score : ${computerScore}`);
 }
+function decideWinner()
+{
+   if(playerScore > computerScore){
+      console.log("you win");
+   }
+   else if(computerScore > playerScore){
+      console.log("computer win");
+   }
+   else{
+      console.log("game is drawn");
+   }
 
+}
 function play5Times(){
    playRound();
    playRound();
    playRound();
    playRound();
    playRound();
+   decideWinner();
 }
 
 play5Times();
